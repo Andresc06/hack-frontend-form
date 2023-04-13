@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    text-transform: uppercase;
+}
+
+:root {
+    --general-bg: #F2F3EB;
+    --general-color: #474544;
+}
+
+body {
+    background-color: var(--general-bg);
+}
+
+.underline {
+    border-bottom: solid 2px var(--general-color);
+    margin: 10px auto 80px;
+    text-align: center;
+    width: 80px;
+}
+
+h1 {
+    color: var(--general-color);
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: 5px;
+}
+
+input::placeholder, textarea::placeholder, select::placeholder {
+    color: var(--general-color);
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+}
+
+#letter {
+    border: solid 3px  var(--general-color);
+    width: 700px;
+    margin: 20px auto;
+    height: 620px;
+    padding: 20px;
+}
+
+.select-div {
+    position: relative;
+}
+
+.select-div::after {
+    content: '';
+	background-size: 100%;
+	background-image: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png');
+	position: absolute;
+	top: -5px;
+	width: 32px;
+	aspect-ratio: 1;
+	right: 0;
+}
+
+select {
+    appearance: none;
+    width: 100%;
+}
+
+form {
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "subject subject"
+    "status status"
+    "message message"
+    "button button";
+    width: 100%;
+    gap: 35px;
+}
+
+.underline {
+  border-bottom: solid 2px var(--general-color);
+}
+
+input, textarea, select {
+    background: transparent;
+    border: none;
+    padding-bottom: 7px;
+    border-bottom: solid 2px var(--general-color);
+    color: var(--general-color);
+}
+
+#subject {
+    grid-area: subject;
+}
+
+#name {
+    grid-area: name;
+}
+
+#email {
+    grid-area: email;
+}
+
+.select-div {
+    grid-area: status;
+}
+
+textarea {
+    resize: none;
+    width: 100%;
+    grid-area: message;
+}
+
+#button {
+    color: #F2F3EB;
+    border: solid 2px var(--general-color);
+    font-weight: bold;
+    color: var(--general-color);
+    padding: 20px;
+    cursor: pointer;
+    grid-area: button;
+    width: fit-content;
+    margin-top: -10px;
+}
+
+
